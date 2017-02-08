@@ -14,5 +14,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "A React app to create & manage appointments",
+  "main": "index.js",
+  "repository": "https://github.com/dp28/appointments.git",
+  "author": "Daniel Patterson <dan24patt@gmail.com>",
+  "license": "MIT"
 }
