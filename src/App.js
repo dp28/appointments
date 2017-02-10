@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { Navbar, Grid, Row, Col } from 'react-bootstrap';
 
 import AppointmentList from './appointment-list/AppointmentList';
+import NewAppointment from './new-appointment/NewAppointment';
 import { initialise } from './initialise/InitialiseActions';
 import { store } from './state/store';
 
@@ -22,6 +23,9 @@ const App = () => (
       </Navbar>
       <Grid>
         <Row>
+          <Col xs={12}>
+            <NewAppointment />
+          </Col>
           <Col xs={12}>
             <AppointmentList />
           </Col>
