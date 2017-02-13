@@ -24,11 +24,13 @@ const App = () => (
       </Navbar>
       <Grid>
         <Row>
-          <Col xs={12}>
+          <Col xs={12} sm={6} md={4}>
+            <h2>New appointment</h2>
             <Alert />
             <NewAppointment />
           </Col>
-          <Col xs={12}>
+          <Col xs={12} sm={6} md={8}>
+            <h2>All appointments</h2>
             <AppointmentList />
           </Col>
         </Row>

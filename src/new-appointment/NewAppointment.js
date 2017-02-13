@@ -5,9 +5,10 @@ import { Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootst
 import DatePicker from '../date-picker/DatePicker';
 import TimePicker from '../time-picker/TimePicker';
 import * as actions from './NewAppointmentActions';
+import './NewAppointment.css';
 
 export const NewAppointment = ({ createAppointment }) => (
-  <Form onSubmit={createAppointment}>
+  <Form onSubmit={createAppointment} className="NewAppointment">
     <FormGroup controlId="titleInput">
       <ControlLabel>Title</ControlLabel>
       <FormControl name="title" type="text" />
