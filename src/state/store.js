@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
 
 import { reducer } from './reducer';
+import { persistAppointments } from './persistence';
 
 const logger = store => next => action => {
   console.group(action.type);
@@ -11,4 +12,4 @@ const logger = store => next => action => {
   return result;
 }
 
-export const store = createStore(reducer, applyMiddleware(logger));
+export const store = createStore(reducer, applyMiddleware(logger, persistAppointments));
