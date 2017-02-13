@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 
+import 'react-dates/lib/css/_datepicker.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 

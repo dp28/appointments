@@ -2,11 +2,18 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Form, FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
 
+import DatePicker from '../date-picker/DatePicker';
+
 export const NewAppointment = ({ createAppointment }) => (
   <Form onSubmit={createAppointment}>
     <FormGroup controlId="titleInput">
       <ControlLabel>Title</ControlLabel>
       <FormControl name="title" type="text" />
+    </FormGroup>
+
+    <FormGroup controlId="dateInput">
+      <ControlLabel>Date</ControlLabel>
+      <DatePicker id="dateInput" />
     </FormGroup>
 
     <FormGroup controlId="timeInput">
