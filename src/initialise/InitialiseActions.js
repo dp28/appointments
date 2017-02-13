@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 export const INITIALISE = 'INITIALISE';
 
 const DEFAULT_DATA = {
@@ -5,12 +7,12 @@ const DEFAULT_DATA = {
     {
       id:    'some_hopefully_unique_id',
       title: 'Tech meetup',
-      start: new Date(2017, 1, 8, 18, 30)
+      start: moment(new Date(2017, 1, 8, 18, 30))
     },
     {
       id:    'some_other_hopefully_unique_id',
       title: 'Harry Potter and the Cursed Child',
-      start: new Date(2017, 12, 8, 10, 30)
+      start: moment(new Date(2017, 12, 8, 10, 30))
     },
   ]
 }

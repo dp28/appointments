@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Form, FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
+import { Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
 
 import DatePicker from '../date-picker/DatePicker';
 import TimePicker from '../time-picker/TimePicker';
+import * as actions from './NewAppointmentActions';
 
 export const NewAppointment = ({ createAppointment }) => (
   <Form onSubmit={createAppointment}>
@@ -21,6 +22,10 @@ export const NewAppointment = ({ createAppointment }) => (
       <ControlLabel>Time</ControlLabel>
       <TimePicker id="timeInput" />
     </FormGroup>
+
+    <FormGroup controlId="submit">
+      <Button type="submit" bsStyle="primary">Add</Button>
+    </FormGroup>
   </Form>
 );
 
@@ -28,8 +33,7 @@ export function mapDispatchToProps(dispatch) {
   return {
     createAppointment: (event) => {
       event.preventDefault();
-      const form = event.target;
-      console.log(form.title.value, form.time.value);
+      dispatch(actions.createAppointment(event.target.title.value));
     }
   };
 }
