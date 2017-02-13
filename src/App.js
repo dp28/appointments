@@ -4,6 +4,7 @@ import { Navbar, Grid, Row, Col } from 'react-bootstrap';
 
 import AppointmentList from './appointment-list/AppointmentList';
 import NewAppointment from './new-appointment/NewAppointment';
+import Alert from './alert/Alert';
 import { initialise } from './initialise/InitialiseActions';
 import { store } from './state/store';
 
@@ -24,6 +25,7 @@ const App = () => (
       <Grid>
         <Row>
           <Col xs={12}>
+            <Alert />
             <NewAppointment />
           </Col>
           <Col xs={12}>

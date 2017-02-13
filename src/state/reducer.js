@@ -1,3 +1,4 @@
+import alert from '../alert/AlertReducer';
 import initialise from '../initialise/InitialiseReducer';
 import datePicker from '../date-picker/DatePickerReducer';
 import timePicker from '../time-picker/TimePickerReducer';
@@ -14,6 +15,7 @@ export function reducer(state = {}, action) {
 function reduceParts(state, action) {
   return {
     ...state,
+    alert: alert(state.alert, action),
     datePicker: datePicker(state.datePicker, action),
     timePicker: timePicker(state.timePicker, action)
   }
