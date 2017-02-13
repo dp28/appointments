@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { SingleDatePicker } from 'react-dates';
 
+import { DATE_FORMAT } from '../utils/time';
 import * as actions from './DatePickerActions';
 import './DatePicker.css'
 
@@ -12,7 +13,7 @@ export const DatePicker = ({ selectedDate, selectingDate, id, toggleDateFocus, s
     onDateChange={selectDate}
     onFocusChange={toggleDateFocus}
     focused={selectingDate}
-    displayFormat="ddd Do MMM, YYYY"
+    displayFormat={DATE_FORMAT}
     numberOfMonths={1}
     enableOutsideDays={true}
   />
