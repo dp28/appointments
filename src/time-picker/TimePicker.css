@@ -1,0 +1,5 @@
+.TimePicker .dropdown-menu {
+  min-width: initial;
+  max-height: 200px;
+  overflow-y: auto;
+}

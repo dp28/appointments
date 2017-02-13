@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Form, FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
 
 import DatePicker from '../date-picker/DatePicker';
+import TimePicker from '../time-picker/TimePicker';
 
 export const NewAppointment = ({ createAppointment }) => (
   <Form onSubmit={createAppointment}>
@@ -18,7 +19,7 @@ export const NewAppointment = ({ createAppointment }) => (
 
     <FormGroup controlId="timeInput">
       <ControlLabel>Time</ControlLabel>
-      <FormControl name="time" type="time" />
+      <TimePicker id="timeInput" />
     </FormGroup>
   </Form>
 );

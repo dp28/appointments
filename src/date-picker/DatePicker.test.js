@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import moment from 'moment';
 
+import { identity } from '../utils/functional';
 import { TOGGLE_DATE_FOCUS, SELECT_DATE } from './DatePickerActions';
 import {
   mapStateToProps,
@@ -25,7 +26,7 @@ describe('the unconnected DatePicker', () => {
 
 describe('#mapStateToProps', () => {
   it('should return the "datePicker" property from the state', () => {
-    const datePicker = { a:2 , b: 1 };
+    const datePicker = { a: 2, b: 1 };
     const state = { datePicker, somethingElse: {} };
     expect(mapStateToProps(state)).toEqual(datePicker);
   });
@@ -46,8 +47,3 @@ describe('#mapDispatchToProps', () => {
     mockValue: false
   });
 });
-
-function identity(x) {
-  console.log("HERE", x)
-  return x;
-}
