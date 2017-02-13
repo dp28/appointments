@@ -1,6 +1,7 @@
 # appointments
 
-A React app to create & manage appointments.
+A React app to create & manage appointments. Some example apppointments are 
+pre-loaded and any added appointments are saved to localStorage if available.
 
 This project was bootstrapped with 
 [Create React App](https://github.com/facebookincubator/create-react-app).
